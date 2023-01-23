@@ -1,14 +1,25 @@
 "use strict";
-
-//const invitation = prompt("Choose Rock, Paper or Scissors 😃!");
+// const invitation = prompt("Choose rock, paper or scissors 😃!");
 
 const getComputerChoice = () => {
   const randomChoice = Math.floor(Math.random() * 3);
   if (randomChoice === 0) {
-    return "Rock";
+    return "rock";
   } else if (randomChoice === 1) {
-    return "Scissors";
+    return "scissors";
   } else randomChoice === 2;
-  return "Paper";
+  return "paper";
 };
-console.log(getComputerChoice());
+
+const getPlayerChoice = (userInput) => {
+  if (userInput.toLowerCase() === "rock") {
+    return userInput;
+  } else if (userInput.toLowerCase() === "paper") {
+    return userInput;
+  } else if (userInput.toLowerCase() === "scissors") {
+    return userInput;
+    W;
+  } else {
+    return `Input is not valid, you don not fool me mister;`;
+  }
+};
