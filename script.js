@@ -18,8 +18,34 @@ const getPlayerChoice = (userInput) => {
     return userInput;
   } else if (userInput.toLowerCase() === "scissors") {
     return userInput;
-    W;
   } else {
-    return `Input is not valid, you don not fool me mister;`;
+    return "Input is not valid, you don not fool me mister";
   }
 };
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return "Same decision - boring...";
+  } else if (playerSelection === "rock") {
+    if (computerSelection === "paper") {
+      return "The computer wins!";
+    } else {
+      return "You won!";
+    }
+  } else if (playerSelection === "paper") {
+    if (computerSelection === "scissors") {
+      return "The computer wins!";
+    } else {
+      return "You won!";
+    }
+  } else if (playerSelection === "scissors") {
+    if (computerSelection === "rock") {
+      return "The computer wins!";
+    } else {
+      return "You won!";
+    }
+  }
+}
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
