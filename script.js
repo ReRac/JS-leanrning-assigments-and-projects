@@ -1,5 +1,6 @@
 "use strict";
 // const invitation = prompt("Choose rock, paper or scissors 😃!");
+let userInput = prompt("Please enter rock, paper or scissors! ");
 
 const getComputerChoice = () => {
   const randomChoice = Math.floor(Math.random() * 3);
@@ -46,6 +47,14 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 }
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+
+for (let game = 1; game <= 5; game++) {
+  const playerSelection = userInput;
+  const computerSelection = getComputerChoice();
+  console.log(
+    `Mr. Computer says ${computerSelection}, kind human says ${playerSelection} -  ${playRound(
+      playerSelection,
+      computerSelection
+    )}`
+  );
+}
